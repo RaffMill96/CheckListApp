@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,13 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RMLogo1.1blk" translatesAutoresizingMaskIntoConstraints="NO" id="egh-DU-4w8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RMLogo1.1blk" translatesAutoresizingMaskIntoConstraints="NO" id="egh-DU-4w8">
                                 <rect key="frame" x="41" y="187" width="292" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="OFF-8K-5Jz"/>
+                                    <constraint firstAttribute="height" constant="292" id="ohI-yy-nKH"/>
+                                    <constraint firstAttribute="width" secondItem="egh-DU-4w8" secondAttribute="height" multiplier="1:1" id="rAL-xe-uRz"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="egh-DU-4w8" firstAttribute="centerY" secondItem="OeU-Jf-qbb" secondAttribute="centerY" id="HZa-eK-USt"/>
+                            <constraint firstItem="egh-DU-4w8" firstAttribute="centerX" secondItem="OeU-Jf-qbb" secondAttribute="centerX" id="qCG-cL-7o6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a5D-2M-KIZ"/>
                     </view>
                 </viewController>
