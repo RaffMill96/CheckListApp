@@ -2,8 +2,8 @@
 //  ItemDetailViewController.swift
 //  Checklists
 //
-//  Created by Jeremy Fleshman on 5/15/18.
-//  Copyright © 2018 Jeremy Fleshman. All rights reserved.
+//  Created by Rafael Millan on 7/13/18.
+//  Copyright © 2018 Rafael Millan. All rights reserved.
 //
 
 import UIKit
@@ -136,7 +136,14 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             itemToEdit.text = textField.text!
             itemToEdit.shouldRemind = shouldRemindSwitch.isOn
             itemToEdit.dueDate = dueDate
-            itemToEdit.desc = descriptionTextField.text
+            if descriptionTextField.text == "Description..."
+            {
+                itemToEdit.desc = ""
+            }
+            else
+            {
+                itemToEdit.desc = descriptionTextField.text
+            }
             itemToEdit.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishEditing: itemToEdit)
         } else {

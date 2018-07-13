@@ -109,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ds-gV-fHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="642"/>
+            <point key="canvasLocation" x="849" y="824"/>
         </scene>
         <!--Checklist-->
         <scene sceneID="mX9-7J-BSh">
@@ -189,7 +189,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4B-Nu-wlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="-1"/>
+            <point key="canvasLocation" x="1628" y="0.0"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="Kbh-V6-0GO">
@@ -381,7 +381,7 @@
                     </userDefinedRuntimeAttributes>
                 </tableViewCell>
             </objects>
-            <point key="canvasLocation" x="1734" y="-1"/>
+            <point key="canvasLocation" x="2391" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ghq-g7-TzP">
@@ -410,7 +410,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhd-lW-p68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="-1"/>
+            <point key="canvasLocation" x="156" y="-1"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

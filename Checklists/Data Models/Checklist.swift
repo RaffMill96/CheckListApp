@@ -2,8 +2,8 @@
 //  Checklist.swift
 //  Checklists
 //
-//  Created by Jeremy Fleshman on 6/4/18.
-//  Copyright © 2018 Jeremy Fleshman. All rights reserved.
+//  Created by Jeremy Rafael Millan on 7/13/18.
+//  Copyright © 2018 Rafael Millan. All rights reserved.
 //
 
 import UIKit

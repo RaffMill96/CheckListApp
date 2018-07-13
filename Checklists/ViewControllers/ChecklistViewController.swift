@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Checklists
 //
-//  Created by Jeremy Fleshman on 5/9/18.
-//  Copyright © 2018 Jeremy Fleshman. All rights reserved.
+//  Created by Rafael Millan on 7/13/18.
+//  Copyright © 2018 Rafael Millan. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  ChecklistItem.swift
 //  Checklists
 //
-//  Created by Jeremy Fleshman on 5/11/18.
-//  Copyright © 2018 Jeremy Fleshman. All rights reserved.
+//  Created by Rafael Millan on 7/13/18.
+//  Copyright © 2018 Rafael Millan. All rights reserved.
 //
 
 import Foundation
@@ -43,8 +43,15 @@ class ChecklistItem: NSObject, Codable {
         if shouldRemind && dueDate > Date() {
             // make notification content
             let content = UNMutableNotificationContent()
-            content.title = "Reminder:"
-            content.body = text //Add description to Notification LATER
+            content.title = "Reminder"
+            if desc == "Description..." || desc == ""
+            {
+                content.body = text
+            }
+            else
+            {
+                content.body = text + ":\n" + desc
+            }
             content.sound = UNNotificationSound.default()
             
             // extract date from obj prop
