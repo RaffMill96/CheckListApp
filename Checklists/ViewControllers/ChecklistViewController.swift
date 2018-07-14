@@ -12,10 +12,18 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     // currently selected checklist (using to set nav title)
     // will be nil until 'prepare(for:sender:)' executes for vc to receive obj -- so must be optional
     var checklist: Checklist!
-    
+    var widgetsNames: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "background.jpg"))
+        itemNames(checklists: checklist)
+        
+        let groupDefaults = UserDefaults(suiteName: "group.com.rafmillan.checklists")
+        
+        groupDefaults?.set(widgetsNames, forKey: "extensionText")
+        
+        //print(itemNames(checklists: checklist))
+        
         // disables large title for the nav item since the parent controller has it enabled and the navItems
         // will inherit the parent's preference for title display
         navigationItem.largeTitleDisplayMode = .never
@@ -26,6 +34,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         
         //may be a better place for sorting the checklists
         checklist.sortChecklistItems()
+    }
+    
+    func itemNames(checklists: Checklist)
+    {
+        for n in checklist.items
+        {
+            widgetsNames +=  "  " + n.text + "\n"
+        }
     }
     
     // utilizing prepare(for:sender:) for the delegate pattern
@@ -80,7 +96,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         //remove from data model ('items' array)
         checklist.items.remove(at: indexPath.row)
-        
         //remove from the table view
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
